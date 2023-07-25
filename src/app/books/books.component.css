@@ -1,12 +1,53 @@
+/* Custom CSS for the books container */
 .books {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-}
-.book-item {
-    padding : 30px 10px 10px 10px;
-    text-align: center;
-    width: 220px;
-    margin-bottom: 20px;
-}
+    justify-content: flex-start;
+  }
+  
+  /* Style for each book item */
+  .book-item {
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 30px;
+    
+  }
+  
+  /* Style for the book image */
+  .book-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the book title */
+  .book-item h4 {
+    margin-top: 0;
+  }
+  
+  /* Style for the book description */
+  .book-item p {
+    margin: 0;
+  }
+  
+  /* Style for the book price */
+  .book-item p:nth-child(4) {
+    font-weight: bold;
+  }
+  
+  /* Style for the book stock */
+  .book-item p:nth-child(5) {
+    color: #888;
+  }
+  
+  /* Add hover effect on book items */
+  .book-item:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
   

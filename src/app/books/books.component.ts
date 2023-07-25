@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Book } from './book.model';
 import * as Bucket from '@spica-devkit/bucket';
+import * as Storage from '@spica-devkit/storage';
 
 
 @Component({
@@ -10,12 +11,14 @@ import * as Bucket from '@spica-devkit/bucket';
 })
 export class BooksComponent {
   @Input() public books: Book[] = [];
-  constructor() { 
 
-  }
+
+  
+  
 
   async ngOnInit() {
     Bucket.initialize({apikey :"cklbx019ljr002fa",publicUrl:"https://master.spicaengine.com/api"})
+    Storage.initialize({apikey :"cklbx019ljr002fa",publicUrl:"https://master.spicaengine.com/api"})
     await this.getBooks();
   }
 
@@ -30,4 +33,5 @@ export class BooksComponent {
       console.log("Error getting data",err);
     }
   }
+
 }
